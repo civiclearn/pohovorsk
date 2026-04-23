@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bezplatný test — 25 otázok o Slovensku | Štátne občianstvo SR</title>
+  <link rel="canonical" href="https://pohovorobcianstvo.sk/bezplatny-test/" />
+  <meta name="description" content="Otestujte si vedomosti o Slovensku v 25 bezplatných otázkach z piatich tematických okruhov. S časomierou, vysvetleniami a rozborom výsledkov podľa okruhov.">
+  <meta property="og:title" content="Bezplatný test — 25 otázok o Slovensku | Štátne občianstvo SR" />
+  <meta property="og:url" content="https://pohovorobcianstvo.sk/bezplatny-test/" />
+  <meta property="og:image" content="https://pohovorobcianstvo.sk/assets/images/og-default.jpg" />
+  <meta property="og:locale" content="sk_SK">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/newhome.css">
+  <style>
+    .cl-logo span{font-size:0.92rem}.cl-nav a{font-size:0.8rem!important}.cl-btn{font-size:0.8rem!important;padding:0.4rem 0.9rem!important}.cl-powered{font-size:0.7rem!important}
+    .test-wrapper{max-width:720px;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+    .test-topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+    .test-badge{background:#f5f0ff;color:#5b21b6;font-size:0.85rem;font-weight:700;padding:0.4rem 1rem;border-radius:999px}
+    .test-timer{background:#1a1a1a;color:#fff;font-size:0.92rem;font-weight:700;padding:0.45rem 1.1rem;border-radius:999px;font-variant-numeric:tabular-nums;letter-spacing:0.04em}
+    .test-timer.urgent{background:#dc2626;animation:pulse-timer 1s ease-in-out infinite}
+    @keyframes pulse-timer{0%,100%{opacity:1}50%{opacity:0.7}}
+    .test-progress-row{display:flex;align-items:center;gap:0.8rem;margin-bottom:1.5rem}
+    .test-progress-label{font-size:0.82rem;font-weight:600;color:#888;white-space:nowrap}
+    .test-progress-track{flex:1;height:6px;background:#eee;border-radius:999px;overflow:hidden}
+    .test-progress-fill{height:100%;background:linear-gradient(90deg,#0B4EA2,#4a7fc1);border-radius:999px;transition:width 0.35s ease;width:0%}
+    .test-score-label{font-size:0.82rem;font-weight:700;color:#0B4EA2;white-space:nowrap}
+    .q-card{background:#fff;border-radius:1.3rem;padding:2rem 2.2rem 1.8rem;box-shadow:0 6px 24px rgba(0,0,0,0.07);margin-bottom:1rem}
+    @media(max-width:600px){.q-card{padding:1.4rem 1.2rem 1.2rem}}
+    .q-topic-tag{display:inline-block;background:#f0edf8;color:#6d28d9;font-size:0.75rem;font-weight:700;padding:0.25rem 0.7rem;border-radius:999px;margin-bottom:0.9rem;text-transform:uppercase;letter-spacing:0.04em}
+    .q-text{font-size:1.12rem;font-weight:600;color:#1a1a1a;line-height:1.5;margin-bottom:1.4rem}
+    .q-number{color:#a78bfa;font-weight:700}
+    .q-choices{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem}
+    .q-choice{display:block;width:100%;text-align:left;background:#faf9fc;border:2px solid #e8e0f5;border-radius:0.8rem;padding:0.85rem 1.1rem;font-family:'Lexend',sans-serif;font-size:0.97rem;font-weight:500;color:#333;cursor:pointer;transition:border-color 0.15s,background 0.15s,transform 0.1s;line-height:1.45}
+    .q-choice:hover:not(.locked){border-color:#c4b5fd;background:#f5f0ff;transform:translateY(-1px)}
+    .q-choice.locked{cursor:default}
+    .q-choice.correct{border-color:#22c55e;background:#f0fdf4;color:#166534}
+    .q-choice.wrong{border-color:#ef4444;background:#fef2f2;color:#991b1b}
+    .q-choice.correct::before{content:"✓ ";font-weight:700}
+    .q-choice.wrong::before{content:"✗ ";font-weight:700}
+    .q-explanation{display:none;background:#fefce8;border:1px solid #fde68a;border-radius:0.7rem;padding:0.9rem 1.1rem;font-size:0.9rem;color:#713f12;line-height:1.6;margin-bottom:1.2rem}
+    .q-explanation.visible{display:block}
+    .q-nav{display:flex;justify-content:space-between;gap:0.8rem}
+    .q-btn{font-family:'Lexend',sans-serif;font-size:0.92rem;font-weight:600;padding:0.7rem 1.4rem;border-radius:0.65rem;border:none;cursor:pointer;transition:background 0.15s,opacity 0.15s}
+    .q-btn:disabled{opacity:0.35;cursor:not-allowed}
+    .q-btn-prev{background:#f3f0ff;color:#5b21b6}
+    .q-btn-prev:hover:not(:disabled){background:#ebe5ff}
+    .q-btn-next{background:#7c3aed;color:#fff}
+    .q-btn-next:hover:not(:disabled){background:#5b21b6}
+    .results-panel{display:none;text-align:center}
+    .results-panel.visible{display:block}
+    .results-stamp{display:inline-block;font-size:1.6rem;font-weight:800;padding:0.8rem 2rem;border-radius:1rem;margin-bottom:1rem}
+    .results-stamp.pass{background:#dcfce7;color:#166534}
+    .results-stamp.fail{background:#fef2f2;color:#991b1b}
+    .results-score{font-size:1.05rem;color:#444;margin-bottom:2rem;line-height:1.6}
+    .results-topics{text-align:left;max-width:540px;margin:0 auto 2rem}
+    .results-topics h3{font-size:1.1rem;font-weight:700;color:#1a1a1a;margin-bottom:1rem}
+    .rt-row{display:flex;align-items:center;gap:0.8rem;padding:0.6rem 0;border-bottom:1px solid #f0edf8}
+    .rt-row:last-child{border-bottom:none}
+    .rt-name{flex:1;font-size:0.88rem;font-weight:500;color:#333}
+    .rt-score{font-size:0.85rem;font-weight:700;color:#7c3aed;white-space:nowrap}
+    .rt-bar-track{width:100px;height:6px;background:#eee;border-radius:999px;overflow:hidden}
+    .rt-bar-fill{height:100%;border-radius:999px;transition:width 0.5s ease}
+    .rt-bar-fill.good{background:#22c55e}
+    .rt-bar-fill.ok{background:#f59e0b}
+    .rt-bar-fill.bad{background:#ef4444}
+    .results-donut{display:flex;justify-content:center;margin-bottom:2rem}
+    .donut-svg{width:160px;height:160px}
+    .donut-text{font-family:'Lexend',sans-serif;font-size:2rem;font-weight:800;fill:#1a1a1a}
+    .donut-sub{font-family:'Lexend',sans-serif;font-size:0.7rem;font-weight:600;fill:#888}
+    .results-cta{margin-top:1.5rem}
+    .results-cta a{display:inline-block;background:#7c3aed;color:#fff;padding:0.9rem 2rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem;transition:background 0.2s}
+    .results-cta a:hover{background:#5b21b6}
+    .results-cta-sub{font-size:0.85rem;color:#888;margin-top:0.6rem}
+    .intro-panel{text-align:center;padding:3rem 1.5rem}
+    .intro-panel h1{font-size:1.8rem;font-weight:800;color:#1a1a1a;margin-bottom:0.6rem}
+    .intro-panel p{font-size:1rem;color:#555;line-height:1.7;max-width:520px;margin:0 auto 1.5rem}
+    .intro-details{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+    .intro-detail{background:#fff;border-radius:1rem;padding:1rem 1.4rem;box-shadow:0 4px 14px rgba(0,0,0,0.06);text-align:center;min-width:120px}
+    .intro-detail .id-num{font-size:1.5rem;font-weight:800;color:#7c3aed}
+    .intro-detail .id-label{font-size:0.78rem;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.04em}
+    .intro-start{display:inline-block;background:#7c3aed;color:#fff;padding:0.95rem 2.4rem;border-radius:999px;font-weight:700;font-size:1.05rem;border:none;cursor:pointer;font-family:'Lexend',sans-serif;transition:background 0.2s}
+    .intro-start:hover{background:#5b21b6}
+  </style>
+</head>
+<body>
+<header class="cl-header">
+  <div class="cl-header-inner">
+    <a href="/" class="cl-logo"><img src="/assets/images/sk.svg" alt="SK" /><span>Štátne občianstvo SR</span></a>
+    <nav class="cl-nav">
+      <a href="/bezplatny-test/" class="active">Bezplatný test</a>
+      <a href="/clanky/">Články</a>
+      <a href="/kontakt/">Kontakt</a>
+      <a href="https://civiclearn.com/slovensko/login">Prihlásiť sa</a>
+    </nav>
+    <div class="cl-right">
+      <div class="cl-powered">powered by <span>CivicLearn</span></div>
+      <a href="https://civiclearn.com/slovensko/checkout" class="cl-btn">Začať prípravu</a>
+    </div>
+  </div>
+</header>
+
+<div class="test-wrapper">
+  <div class="intro-panel" id="introPanel">
+    <h1>Bezplatný test — pohovor zo štátneho občianstva</h1>
+    <p>Otestujte si vedomosti o Slovensku v 25 otázkach z piatich tematických okruhov. Máte 20 minút. Každá otázka má vysvetlenie správnej odpovede.</p>
+    <div class="intro-details">
+      <div class="intro-detail"><div class="id-num">25</div><div class="id-label">Otázok</div></div>
+      <div class="intro-detail"><div class="id-num">5</div><div class="id-label">Okruhov</div></div>
+      <div class="intro-detail"><div class="id-num">20</div><div class="id-label">Minút</div></div>
+      <div class="intro-detail"><div class="id-num">80 %</div><div class="id-label">Na úspech</div></div>
+    </div>
+    <button class="intro-start" id="btnStart">Spustiť test</button>
+  </div>
+  <div id="testUI" style="display:none">
+    <div class="test-topbar">
+      <span class="test-badge" id="testBadge">Otázka 1 / 25</span>
+      <span class="test-timer" id="testTimer">20:00</span>
+    </div>
+    <div class="test-progress-row">
+      <span class="test-progress-label" id="progressLabel">0 / 25</span>
+      <div class="test-progress-track"><div class="test-progress-fill" id="progressFill"></div></div>
+      <span class="test-score-label" id="scoreLabel">0 správnych</span>
+    </div>
+    <div class="q-card">
+      <div class="q-topic-tag" id="qTopic"></div>
+      <div class="q-text" id="qText"></div>
+      <div class="q-choices" id="qChoices"></div>
+      <div class="q-explanation" id="qExplanation"></div>
+      <div class="q-nav">
+        <button class="q-btn q-btn-prev" id="btnPrev" disabled>← Späť</button>
+        <button class="q-btn q-btn-next" id="btnNext" disabled>Ďalej →</button>
+      </div>
+    </div>
+  </div>
+  <div class="results-panel" id="resultsPanel">
+    <div class="results-donut" id="donutWrap"></div>
+    <div class="results-stamp" id="resultStamp"></div>
+    <p class="results-score" id="resultScore"></p>
+    <div class="results-topics" id="topicBreakdown"><h3>Výsledky podľa okruhov</h3></div>
+    <div class="results-cta">
+      <a href="https://civiclearn.com/slovensko/checkout">Získať plný prístup — 800 otázok</a>
+      <p class="results-cta-sub">59 € · Jednorazová platba · Doživotný prístup</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="footer-year"></span> Štátne občianstvo SR — člen siete CivicLearn.</div>
+    <div class="footer-links">
+      <a href="/bezplatny-test/">Bezplatný test</a>
+      <a href="/clanky/">Články</a>
+      <a href="/kontakt/">Kontakt</a>
+      <a href="/zasady/">Zásady</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById("footer-year").textContent=new Date().getFullYear();</script>
+<script>
+(function(){
+const TOPICS=["Dejiny a štátne symboly","Zemepis SR","Štátne zriadenie a politika","Každodenný život a ekonomika","Kultúra"];
+const RAW=[
+  {t:0,q:"Kedy sa Slovenská republika stala členom Európskej únie?",a:["1. mája 2004","1. januára 1993","29. marca 2004","1. januára 2009"],x:"SR sa stala členom Európskej únie 1. mája 2004 v rámci tzv. \"veľkého rozšírenia\" (10 nových členských štátov)."},
+  {t:0,q:"Kedy bola prijatá Ústava samostatnej Slovenskej republiky?",a:["1. septembra 1992","1. januára 1993","30. októbra 1918","25. novembra 1992"],x:"Ústava SR bola prijatá Slovenskou národnou radou 1. septembra 1992 (na výročie SNP). Účinnosť nadobudla 1. októbra 1992. 1. september je štátnym sviatkom (Deň Ústavy SR)."},
+  {t:0,q:"Kedy vznikla samostatná Slovenská republika?",a:["1. januára 1993","17. novembra 1989","1. septembra 1992","30. októbra 1918"],x:"Samostatná Slovenská republika vznikla 1. januára 1993 rozdelením Českej a Slovenskej Federatívnej Republiky (ČSFR). 1. január je štátnym sviatkom (Deň vzniku SR)."},
+  {t:0,q:"V ktorom roku vznikla Československá republika?",a:["1918","1914","1920","1939"],x:"Československá republika bola vyhlásená 28. októbra 1918 v Prahe, po rozpade Rakúsko-Uhorska. Martinská deklarácia (30. 10. 1918) potvrdila pripojenie Slovenska."},
+  {t:0,q:"Ako sa volalo hlavné slovenské politické hnutie, ktoré vzniklo počas Nežnej revolúcie v novembri 1989?",a:["Verejnosť proti násiliu (VPN)","Občianske fórum (OF)","Kresťanskodemokratické hnutie (KDH)","Hnutie za demokratické Slovensko (HZDS)"],x:"Verejnosť proti násiliu (VPN) vznikla 20. novembra 1989 ako slovenské paralelné hnutie k českému Občianskemu fóru. Hralo kľúčovú úlohu pri pádu komunistického režimu na Slovensku."},
+  {t:1,q:"Na ktorej rieke leží mesto Košice?",a:["Hornád","Bodrog","Laborec","Ondava"],x:"Košice sa rozprestierajú v Košickej kotline na rieke Hornád. Hornád je prítokom rieky Slaná a patrí do povodia Tisy (Čiernomorské povodie)."},
+  {t:1,q:"Ktoré mesto je druhým najväčším mestom SR?",a:["Košice","Prešov","Žilina","Nitra"],x:"Košice sú druhým najväčším mestom Slovenska po Bratislave, s populáciou približne 230 000 obyvateľov. Sú centrom východného Slovenska a sídlom Ústavného súdu SR."},
+  {t:1,q:"Ktorý z nasledujúcich krajov NEPATRÍ medzi 8 samosprávnych krajov SR?",a:["Liptovský kraj","Trenčiansky kraj","Žilinský kraj","Banskobystrický kraj"],x:"Liptovský kraj neexistuje. Slovensko sa delí na 8 samosprávnych krajov: Bratislavský, Trnavský, Trenčiansky, Nitriansky, Žilinský, Banskobystrický, Prešovský a Košický."},
+  {t:1,q:"Ktorá rieka je najdlhšia, ktorá preteká územím Slovenska?",a:["Váh","Dunaj","Hron","Morava"],x:"Najdlhšia rieka pretekajúca výlučne Slovenskom je Váh (403 km). Dunaj má na území SR len asi 172 km, ale je najväčší podľa prietoku."},
+  {t:1,q:"Ktorý vrch je najvyšší vo Vysokých Tatrách a zároveň na Slovensku?",a:["Gerlachovský štít (2 655 m)","Lomnický štít (2 634 m)","Kriváň (2 494 m)","Ďumbier (2 043 m)"],x:"Gerlachovský štít s výškou 2 655 m je najvyšší vrch Vysokých Tatier aj celého Slovenska. Nachádza sa v hlavnom hrebeni Vysokých Tatier."},
+  {t:2,q:"Aký je minimálny vek kandidáta na prezidenta SR?",a:["40 rokov","35 rokov","45 rokov","18 rokov"],x:"Podľa Ústavy SR (čl. 103) môže byť za prezidenta zvolený občan SR, ktorý má právo voliť a dosiahol vek 40 rokov."},
+  {t:2,q:"Koľko úrovní samosprávy existuje v SR?",a:["Dve (obce a samosprávne kraje)","Jedna (len obce)","Tri (obce, okresy, kraje)","Štyri (obce, okresy, kraje, regióny)"],x:"Slovensko má dvojúrovňovú samosprávu: obce (miestna samospráva) a samosprávne kraje (regionálna samospráva). Okresy sú iba jednotkou štátnej správy, nemajú vlastnú samosprávu."},
+  {t:2,q:"V ktorom meste sídli Národná rada SR?",a:["V Bratislave","V Banskej Bystrici","V Košiciach","V Nitre"],x:"Národná rada Slovenskej republiky sídli v Bratislave, v budove pod Bratislavským hradom. Bratislava je hlavným mestom a centrom zákonodarnej, výkonnej a významnej časti súdnej moci."},
+  {t:2,q:"Kto stojí na čele vlády SR?",a:["Predseda vlády","Prezident","Predseda NR SR","Minister vnútra"],x:"Na čele vlády SR stojí predseda vlády (premiér). Vymenúva ho prezident. Premiér navrhuje ministrov a riadi činnosť vlády."},
+  {t:2,q:"Kde sídli Ústavný súd Slovenskej republiky?",a:["V Košiciach","V Bratislave","V Banskej Bystrici","V Žiline"],x:"Ústavný súd Slovenskej republiky sídli v Košiciach. Košice sú tak sídlom najvyššieho súdneho orgánu ochrany ústavnosti."},
+  {t:3,q:"Ako sa nazýva verejnoprávny rozhlas a televízia v SR?",a:["Slovenská televízia a rozhlas (STVR)","Rozhlas a televízia Slovenska (RTVS)","Slovenský rozhlas (SRo)","Slovenská televízia (STV)"],x:"Od 1. júla 2024 sa verejnoprávna inštitúcia oficiálne nazýva Slovenská televízia a rozhlas (STVR). Predtým (2011 – 2024) sa volala Rozhlas a televízia Slovenska (RTVS). Zmena bola predmetom politických sporov."},
+  {t:3,q:"Ktoré sú štyri najväčší výrobcovia osobných automobilov v SR?",a:["Volkswagen Slovakia, Kia Slovakia, Stellantis Slovakia, Volvo Cars Slovakia","Volkswagen, Škoda, BMW, Mercedes","Volvo, Saab, Renault, Peugeot","Volkswagen, Kia, Opel, Ford"],x:"Na Slovensku vyrábajú osobné autá štyri automobilky: Volkswagen Slovakia (Bratislava) od 1991, Kia Slovakia (Žilina) od 2006, Stellantis Slovakia (Trnava) od 2006 a Volvo Cars Slovakia (Košice) od 2025. SR je svetovou jednotkou vo výrobe áut na obyvateľa."},
+  {t:3,q:"Ktoré priemyselné odvetvie je najdôležitejšie pre slovenskú ekonomiku?",a:["Automobilový priemysel","Textilný priemysel","Potravinársky priemysel","Hutnícky priemysel"],x:"Automobilový priemysel je najdôležitejším odvetvím slovenskej ekonomiky. SR je jedným z najväčších výrobcov áut na obyvateľa na svete. Automobilky: Volkswagen (Bratislava), Kia (Žilina), Stellantis (Trnava), Volvo (Košice)."},
+  {t:3,q:"Koľko verejných zdravotných poisťovní existuje v SR?",a:["Tri (VšZP, Dôvera, Union)","Jedna (VšZP)","Dve (VšZP a Dôvera)","Štyri"],x:"V SR existujú tri verejné zdravotné poisťovne: Všeobecná zdravotná poisťovňa (VšZP, štátna), Dôvera a Union (súkromné). Poistenec si môže každý rok zmeniť poisťovňu (zvyčajne do 30. septembra)."},
+  {t:3,q:"Ktoré poistenie musí mať držiteľ motorového vozidla v SR povinne zo zákona?",a:["Povinné zmluvné poistenie (PZP)","Havarijné poistenie","Životné poistenie","Úrazové poistenie"],x:"Povinné zmluvné poistenie (PZP) je zákonom stanovené pre každé motorové vozidlo. Kryje škody spôsobené tretím osobám. Havarijné poistenie (tzv. kasko) je dobrovoľné a kryje škody na vlastnom vozidle."},
+  {t:4,q:"Ktoré východoslovenské historické mesto je od roku 2000 v UNESCO (so zachovaným hradom Rákociovcov)?",a:["Bardejov","Levoča","Prešov","Kežmarok"],x:"Bardejov (okres Bardejov, Prešovský kraj) bol do UNESCO zapísaný v roku 2000. Ide o najlepšie zachované stredoveké mesto v SR s gotickým námestím, radnicou a chrámom sv. Egídia."},
+  {t:4,q:"Kto je autorom básnickej zbierky Slávy dcéra?",a:["Ján Kollár","Pavol Jozef Šafárik","Ján Hollý","Samo Chalupka"],x:"Ján Kollár (1793 – 1852) napísal epickú báseň Slávy dcéra (1824). Bola manifestom slovanskej vzájomnosti a jedným z najvýznamnejších diel slovanského romantizmu."},
+  {t:4,q:"Ktorý hrad na východnom Slovensku je od roku 1993 na zozname UNESCO (a patrí k najväčším v strednej Európe)?",a:["Spišský hrad","Trenčiansky hrad","Devín","Oravský hrad"],x:"Spišský hrad (okres Spišská Nová Ves, Košický kraj) bol do UNESCO zapísaný v roku 1993 ako súčasť komplexu Spišský hrad a pamiatky okolia (s Spišským Podhradím, Spišskou Kapitulou a Žehrou). Patrí medzi najväčšie hrady v strednej Európe."},
+  {t:4,q:"Kto je najvýznamnejší slovenský básnik 2. polovice 20. storočia, autor zbierky Až dozrieme?",a:["Milan Rúfus","Laco Novomeský","Miroslav Válek","Vojtech Mihálik"],x:"Milan Rúfus (1928 – 2009) debutoval zbierkou Až dozrieme (1956) a patrí k najvýznamnejším slovenským básnikom 20. storočia. Bol viackrát nominovaný na Nobelovu cenu."},
+  {t:4,q:"Ktorá historická banícka obec na strednom Slovensku je od roku 1993 zapísaná v UNESCO?",a:["Banská Štiavnica","Banská Bystrica","Kremnica","Špania Dolina"],x:"Historické mesto Banská Štiavnica s technickými pamiatkami jeho okolia je od roku 1993 zapísané v Zozname svetového dedičstva UNESCO pre svoj význam v dejinách baníctva."}
+];
+function shuffle(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+var model=RAW.map(function(item){var c=item.a[0];var s=shuffle(item.a);return{topic:item.t,text:item.q,explanation:item.x,choices:s.map(function(o){return{text:o,isCorrect:o===c};}),answered:false,pickedIndex:-1};});
+var qi=0,score=0,total=model.length,timerSec=20*60,timerInt=null;
+var $=function(id){return document.getElementById(id);};
+$("btnStart").addEventListener("click",function(){$("introPanel").style.display="none";$("testUI").style.display="block";renderQ();timerInt=setInterval(tick,1000);});
+function tick(){timerSec--;if(timerSec<0){clearInterval(timerInt);finish();return;}var m=String(Math.floor(timerSec/60)).padStart(2,"0");var s=String(timerSec%60).padStart(2,"0");$("testTimer").textContent=m+":"+s;if(timerSec<=120)$("testTimer").classList.add("urgent");}
+function answered(){return model.filter(function(q){return q.answered;}).length;}
+function renderQ(){var q=model[qi];$("qTopic").textContent=TOPICS[q.topic];$("qText").innerHTML='<span class="q-number">'+(qi+1)+'.</span> '+q.text;$("qChoices").innerHTML="";q.choices.forEach(function(c,idx){var btn=document.createElement("button");btn.className="q-choice"+(q.answered?" locked":"");btn.textContent=c.text;btn.addEventListener("click",function(){pick(idx);});$("qChoices").appendChild(btn);});if(q.answered)reveal();$("qExplanation").textContent=q.explanation;$("qExplanation").className="q-explanation"+(q.answered?" visible":"");$("btnPrev").disabled=(qi===0);$("btnNext").disabled=!q.answered;$("btnNext").textContent=(qi===total-1)?"Výsledky →":"Ďalej →";$("testBadge").textContent="Otázka "+(qi+1)+" / "+total;var a=answered();$("progressLabel").textContent=a+" / "+total;$("progressFill").style.width=((a/total)*100)+"%";$("scoreLabel").textContent=score+" správnych";}
+function pick(idx){var q=model[qi];if(q.answered)return;q.answered=true;q.pickedIndex=idx;if(q.choices[idx].isCorrect)score++;reveal();$("qExplanation").className="q-explanation visible";$("btnNext").disabled=false;var a=answered();$("progressLabel").textContent=a+" / "+total;$("progressFill").style.width=((a/total)*100)+"%";$("scoreLabel").textContent=score+" správnych";}
+function reveal(){var q=model[qi];$("qChoices").querySelectorAll(".q-choice").forEach(function(b,i){b.classList.add("locked");if(q.choices[i].isCorrect)b.classList.add("correct");if(q.pickedIndex===i&&!q.choices[i].isCorrect)b.classList.add("wrong");});}
+$("btnNext").addEventListener("click",function(){if(qi<total-1){qi++;renderQ();}else finish();});
+$("btnPrev").addEventListener("click",function(){if(qi>0){qi--;renderQ();}});
+function finish(){clearInterval(timerInt);$("testUI").style.display="none";$("resultsPanel").classList.add("visible");var pct=Math.round((score/total)*100),pass=pct>=80;var stamp=$("resultStamp");stamp.textContent=pass?"Prešli ste!":"Zatiaľ to nevyšlo";stamp.className="results-stamp "+(pass?"pass":"fail");$("resultScore").textContent=score+" / "+total+" správnych ("+pct+" %). "+(pass?"Dosiahli ste hranicu 80 %. Výborne!":"Hranica úspechu je 80 %. Pokračujte v tréningu — dostanete sa tam!");var r=60,c=2*Math.PI*r,offset=c-(pct/100)*c,color=pct>=80?"#22c55e":pct>=50?"#f59e0b":"#ef4444";$("donutWrap").innerHTML='<svg class="donut-svg" viewBox="0 0 160 160"><circle cx="80" cy="80" r="'+r+'" fill="none" stroke="#eee" stroke-width="14"/><circle cx="80" cy="80" r="'+r+'" fill="none" stroke="'+color+'" stroke-width="14" stroke-dasharray="'+c+'" stroke-dashoffset="'+offset+'" stroke-linecap="round" transform="rotate(-90 80 80)" style="transition:stroke-dashoffset 1s ease"/><text x="80" y="74" text-anchor="middle" class="donut-text">'+pct+'%</text><text x="80" y="96" text-anchor="middle" class="donut-sub">SPRÁVNYCH</text></svg>';var wrap=$("topicBreakdown"),stats={};TOPICS.forEach(function(t,i){stats[i]={right:0,total:0};});model.forEach(function(q){stats[q.topic].total++;if(q.answered&&q.choices[q.pickedIndex]&&q.choices[q.pickedIndex].isCorrect)stats[q.topic].right++;});TOPICS.forEach(function(name,i){var s=stats[i];if(!s.total)return;var p=Math.round((s.right/s.total)*100);var cls=p>=75?"good":p>=50?"ok":"bad";var row=document.createElement("div");row.className="rt-row";row.innerHTML='<span class="rt-name">'+name+'</span><span class="rt-score">'+s.right+'/'+s.total+'</span><div class="rt-bar-track"><div class="rt-bar-fill '+cls+'" style="width:'+p+'%"></div></div>';wrap.appendChild(row);});window.scrollTo({top:0,behavior:"smooth"});}
+})();
+</script>
+</body>
+</html>

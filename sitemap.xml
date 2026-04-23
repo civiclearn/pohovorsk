@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PRIMARY PAGES (Slovak only)
+       ═══════════════════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/bezplatny-test/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/o-pohovore/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/clanky/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/kontakt/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/zasady/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SLOVAK-ONLY ARTICLES (3 & 4 — no translations per Tier 3 decision)
+       ═══════════════════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/ako-sa-pripravit/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/ako-prebieha-den-pohovoru/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       ARTICLE 1 — 5-LANGUAGE MATRIX
+       "What is the pohovor" / SK-EN-RU-UK-HU
+       ═══════════════════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/what-is-slovak-citizenship-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/shcho-take-spivbesida-na-gromadyanstvo/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/mi-az-allampolgarsagi-elbeszelgetes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/en/what-is-slovak-citizenship-interview/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/what-is-slovak-citizenship-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/shcho-take-spivbesida-na-gromadyanstvo/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/mi-az-allampolgarsagi-elbeszelgetes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/what-is-slovak-citizenship-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/shcho-take-spivbesida-na-gromadyanstvo/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/mi-az-allampolgarsagi-elbeszelgetes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/uk/shcho-take-spivbesida-na-gromadyanstvo/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/what-is-slovak-citizenship-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/shcho-take-spivbesida-na-gromadyanstvo/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/mi-az-allampolgarsagi-elbeszelgetes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/hu/mi-az-allampolgarsagi-elbeszelgetes/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/what-is-slovak-citizenship-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/shcho-take-spivbesida-na-gromadyanstvo/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/mi-az-allampolgarsagi-elbeszelgetes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/co-je-pohovor-obcianstva/"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       ARTICLE 2 — 5-LANGUAGE MATRIX
+       "Who must take the interview" / SK-EN-RU-UK-HU
+       ═══════════════════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/who-must-take-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/kto-dolzhen-sdavat-sobesedovanie/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/khto-maye-prokhodyty-spivbesidu/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/kinek-kell-elbeszelgetesre-mennie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/en/who-must-take-interview/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/who-must-take-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/kto-dolzhen-sdavat-sobesedovanie/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/khto-maye-prokhodyty-spivbesidu/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/kinek-kell-elbeszelgetesre-mennie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/ru/kto-dolzhen-sdavat-sobesedovanie/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/who-must-take-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/kto-dolzhen-sdavat-sobesedovanie/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/khto-maye-prokhodyty-spivbesidu/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/kinek-kell-elbeszelgetesre-mennie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/uk/khto-maye-prokhodyty-spivbesidu/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/who-must-take-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/kto-dolzhen-sdavat-sobesedovanie/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/khto-maye-prokhodyty-spivbesidu/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/kinek-kell-elbeszelgetesre-mennie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+  </url>
+
+  <url>
+    <loc>https://pohovorobcianstvo.sk/hu/kinek-kell-elbeszelgetesre-mennie/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pohovorobcianstvo.sk/en/who-must-take-interview/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pohovorobcianstvo.sk/ru/kto-dolzhen-sdavat-sobesedovanie/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pohovorobcianstvo.sk/uk/khto-maye-prokhodyty-spivbesidu/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://pohovorobcianstvo.sk/hu/kinek-kell-elbeszelgetesre-mennie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pohovorobcianstvo.sk/kto-musi-absolvovat-pohovor/"/>
+  </url>
+
+</urlset>

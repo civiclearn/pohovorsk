@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Pohovor zo štátneho občianstva — komisia a žiadateľ</title>
+  <desc id="svg-desc">Abstraktné zobrazenie trojčlennej komisie za stolom a žiadateľa stojaceho oproti, s dialógovou bublinou medzi nimi.</desc>
+
+  <!-- Background -->
+  <rect width="1200" height="628" fill="#FAF7EF"/>
+
+  <!-- Subtle grid texture -->
+  <g opacity="0.06">
+    <path d="M0 80h1200M0 160h1200M0 240h1200M0 320h1200M0 400h1200M0 480h1200M0 560h1200" stroke="#0B4EA2" stroke-width="1"/>
+  </g>
+
+  <!-- Decorative shield top-left (coat-of-arms hint) -->
+  <g transform="translate(80, 70)">
+    <path d="M0 0 L60 0 L60 45 Q60 72 30 85 Q0 72 0 45 Z" fill="#EE1C25" opacity="0.9"/>
+    <path d="M0 0 L60 0 L60 18 L0 18 Z" fill="#0B4EA2" opacity="0.9"/>
+    <rect x="0" y="18" width="60" height="18" fill="#FAF7EF"/>
+    <path d="M12 52 L48 52 M20 62 L40 62 M26 72 L34 72" stroke="#FAF7EF" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Commission table (right side) -->
+  <g transform="translate(640, 340)">
+    <!-- Table surface -->
+    <path d="M-20 80 L480 80 L460 140 L0 140 Z" fill="#0B4EA2"/>
+    <path d="M-20 80 L480 80 L490 85 L-10 85 Z" fill="#083063"/>
+
+    <!-- Three commission members -->
+    <!-- Member 1 -->
+    <g transform="translate(70, -20)">
+      <ellipse cx="0" cy="85" rx="45" ry="18" fill="#083063" opacity="0.3"/>
+      <rect x="-35" y="35" width="70" height="55" rx="8" fill="#083063"/>
+      <circle cx="0" cy="20" r="24" fill="#E8C4A0"/>
+      <path d="M-18 12 Q-18 0 0 0 Q18 0 18 12 L18 20 L-18 20 Z" fill="#5B4636"/>
+    </g>
+
+    <!-- Member 2 (center, slightly raised) -->
+    <g transform="translate(220, -30)">
+      <ellipse cx="0" cy="95" rx="50" ry="20" fill="#083063" opacity="0.3"/>
+      <rect x="-40" y="40" width="80" height="60" rx="8" fill="#083063"/>
+      <rect x="-12" y="48" width="24" height="12" fill="#EE1C25"/>
+      <circle cx="0" cy="22" r="26" fill="#E8C4A0"/>
+      <path d="M-20 14 Q-20 0 0 0 Q20 0 20 14 L20 22 L-20 22 Z" fill="#3A2817"/>
+    </g>
+
+    <!-- Member 3 -->
+    <g transform="translate(370, -20)">
+      <ellipse cx="0" cy="85" rx="45" ry="18" fill="#083063" opacity="0.3"/>
+      <rect x="-35" y="35" width="70" height="55" rx="8" fill="#083063"/>
+      <circle cx="0" cy="20" r="24" fill="#E8C4A0"/>
+      <path d="M-18 12 Q-18 2 0 2 Q18 2 18 12 L18 20 L-18 20 Z" fill="#6B4423"/>
+    </g>
+
+    <!-- Documents on table -->
+    <g transform="translate(50, 95)">
+      <rect x="0" y="0" width="50" height="32" fill="#FAF7EF" stroke="#D4C9B0"/>
+      <path d="M5 8h40M5 14h35M5 20h40M5 26h30" stroke="#6B7280" stroke-width="1"/>
+    </g>
+    <g transform="translate(280, 100)">
+      <rect x="0" y="0" width="50" height="32" fill="#FAF7EF" stroke="#D4C9B0"/>
+      <path d="M5 8h40M5 14h40M5 20h35M5 26h40" stroke="#6B7280" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- Applicant (left side) -->
+  <g transform="translate(180, 330)">
+    <ellipse cx="0" cy="170" rx="70" ry="20" fill="#0B4EA2" opacity="0.15"/>
+    <rect x="-50" y="70" width="100" height="110" rx="12" fill="#EE1C25"/>
+    <circle cx="0" cy="40" r="38" fill="#E8C4A0"/>
+    <path d="M-28 30 Q-28 10 0 10 Q28 10 28 30 L28 48 L-28 48 Z" fill="#2D1810"/>
+  </g>
+
+  <!-- Dialog bubble between applicant and commission -->
+  <g transform="translate(440, 180)">
+    <path d="M0 0 L180 0 Q200 0 200 20 L200 90 Q200 110 180 110 L40 110 L20 135 L25 110 L0 110 Q-20 110 -20 90 L-20 20 Q-20 0 0 0 Z" fill="#FFFFFF" stroke="#0B4EA2" stroke-width="2.5"/>
+    <text x="90" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#0B4EA2">?</text>
+    <circle cx="55" cy="80" r="3" fill="#0B4EA2"/>
+    <circle cx="90" cy="80" r="3" fill="#0B4EA2"/>
+    <circle cx="125" cy="80" r="3" fill="#0B4EA2"/>
+  </g>
+
+  <!-- Legal anchor (bottom-right corner) -->
+  <g transform="translate(1080, 580)" opacity="0.45">
+    <text x="0" y="0" text-anchor="end" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#6B7280">§ 8 ods. 6 • zákon 40/1993 Z. z.</text>
+  </g>
+
+  <!-- Kicker label top-right -->
+  <g transform="translate(1120, 95)">
+    <text x="0" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#0B4EA2">POHOVOR · SR</text>
+  </g>
+</svg>

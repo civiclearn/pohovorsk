@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Kto musí absolvovať pohovor — kategórie žiadateľov</title>
+  <desc id="svg-desc">Zjednodušená silueta Slovenska s postavičkami znázorňujúcimi rôzne kategórie žiadateľov a výnimky.</desc>
+
+  <!-- Background -->
+  <rect width="1200" height="628" fill="#FAF7EF"/>
+
+  <!-- Subtle grid texture -->
+  <g opacity="0.06">
+    <path d="M0 80h1200M0 160h1200M0 240h1200M0 320h1200M0 400h1200M0 480h1200M0 560h1200" stroke="#0B4EA2" stroke-width="1"/>
+  </g>
+
+  <!-- Decorative shield top-left -->
+  <g transform="translate(80, 70)">
+    <path d="M0 0 L60 0 L60 45 Q60 72 30 85 Q0 72 0 45 Z" fill="#EE1C25" opacity="0.9"/>
+    <path d="M0 0 L60 0 L60 18 L0 18 Z" fill="#0B4EA2" opacity="0.9"/>
+    <rect x="0" y="18" width="60" height="18" fill="#FAF7EF"/>
+    <path d="M12 52 L48 52 M20 62 L40 62 M26 72 L34 72" stroke="#FAF7EF" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Simplified Slovakia silhouette (abstract, centered) -->
+  <g transform="translate(600, 314)">
+    <!-- Map blob — stylized horizontal oval with geographic hint -->
+    <path d="M-240 -40
+             Q-220 -80 -160 -85
+             Q-100 -90 -40 -78
+             Q20 -65 80 -72
+             Q150 -80 200 -58
+             Q250 -35 240 5
+             Q225 40 180 50
+             Q120 58 60 48
+             Q0 38 -60 45
+             Q-140 55 -200 35
+             Q-250 15 -260 -15
+             Q-265 -30 -240 -40 Z"
+          fill="#0B4EA2" opacity="0.88"/>
+
+    <!-- Bratislava star marker -->
+    <g transform="translate(-215, -20)">
+      <circle cx="0" cy="0" r="7" fill="#EE1C25"/>
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    </g>
+    <!-- Košice star marker -->
+    <g transform="translate(195, -5)">
+      <circle cx="0" cy="0" r="6" fill="#EE1C25"/>
+      <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Mountain range hints -->
+    <g opacity="0.35">
+      <path d="M-100 -40 L-80 -58 L-60 -44 L-40 -60 L-20 -42 L0 -55 L20 -40" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- Country label -->
+    <text x="-10" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" letter-spacing="4">SLOVENSKO</text>
+  </g>
+
+  <!-- Figure cluster TOP-LEFT: standard applicant (must take) -->
+  <g transform="translate(200, 150)">
+    <!-- Check badge -->
+    <circle cx="80" cy="-15" r="18" fill="#2E7D32"/>
+    <path d="M71 -15 L77 -9 L89 -21" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Figure -->
+    <ellipse cx="40" cy="90" rx="40" ry="10" fill="#0B4EA2" opacity="0.15"/>
+    <rect x="10" y="30" width="60" height="65" rx="8" fill="#0B4EA2"/>
+    <circle cx="40" cy="18" r="22" fill="#E8C4A0"/>
+    <path d="M22 12 Q22 -2 40 -2 Q58 -2 58 12 L58 22 L22 22 Z" fill="#3A2817"/>
+
+    <text x="40" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#083063">Žiadateľ</text>
+  </g>
+
+  <!-- Figure cluster TOP-RIGHT: spouse of citizen (must take, reduced residency) -->
+  <g transform="translate(900, 150)">
+    <circle cx="80" cy="-15" r="18" fill="#2E7D32"/>
+    <path d="M71 -15 L77 -9 L89 -21" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Two figures -->
+    <ellipse cx="40" cy="90" rx="50" ry="10" fill="#0B4EA2" opacity="0.15"/>
+    <rect x="-5" y="35" width="45" height="60" rx="7" fill="#EE1C25"/>
+    <circle cx="17" cy="22" r="18" fill="#E8C4A0"/>
+    <path d="M2 16 Q2 6 17 6 Q32 6 32 16 L32 22 L2 22 Z" fill="#5B4636"/>
+
+    <rect x="40" y="35" width="45" height="60" rx="7" fill="#0B4EA2"/>
+    <circle cx="62" cy="22" r="18" fill="#E8C4A0"/>
+    <path d="M47 14 Q47 2 62 2 Q77 2 77 14 L77 22 L47 22 Z" fill="#2D1810"/>
+
+    <text x="40" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#083063">Manžel / manželka</text>
+  </g>
+
+  <!-- Figure cluster BOTTOM-LEFT: child (exempt under 14) -->
+  <g transform="translate(210, 430)">
+    <!-- X badge -->
+    <circle cx="75" cy="0" r="18" fill="#9CA3AF"/>
+    <path d="M68 -7 L82 7 M82 -7 L68 7" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Child figure -->
+    <ellipse cx="35" cy="105" rx="30" ry="8" fill="#0B4EA2" opacity="0.15"/>
+    <rect x="15" y="55" width="40" height="50" rx="6" fill="#D4A847"/>
+    <circle cx="35" cy="43" r="18" fill="#E8C4A0"/>
+    <path d="M20 38 Q20 25 35 25 Q50 25 50 38 L50 43 L20 43 Z" fill="#8B4513"/>
+
+    <text x="35" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#083063">Dieťa &lt; 14</text>
+    <text x="35" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">oslobodené</text>
+  </g>
+
+  <!-- Figure cluster BOTTOM-RIGHT: holder of Slovak language certificate -->
+  <g transform="translate(900, 430)">
+    <circle cx="75" cy="0" r="18" fill="#9CA3AF"/>
+    <path d="M68 -7 L82 7 M82 -7 L68 7" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Figure with diploma -->
+    <ellipse cx="40" cy="105" rx="40" ry="10" fill="#0B4EA2" opacity="0.15"/>
+    <rect x="10" y="50" width="60" height="55" rx="8" fill="#0B4EA2"/>
+    <circle cx="40" cy="38" r="20" fill="#E8C4A0"/>
+    <path d="M24 32 Q24 20 40 20 Q56 20 56 32 L56 38 L24 38 Z" fill="#4A2F1A"/>
+    <!-- Diploma -->
+    <g transform="translate(72, 60)">
+      <rect x="0" y="0" width="26" height="36" fill="#FAF7EF" stroke="#D4A847" stroke-width="2"/>
+      <circle cx="13" cy="10" r="4" fill="#D4A847"/>
+      <path d="M4 20h18M4 26h14" stroke="#6B7280" stroke-width="1"/>
+    </g>
+
+    <text x="40" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#083063">Certifikát SK</text>
+    <text x="40" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6B7280">B1+ oslobodené</text>
+  </g>
+
+  <!-- Legal anchor -->
+  <g transform="translate(1080, 580)" opacity="0.45">
+    <text x="0" y="0" text-anchor="end" font-family="Georgia, serif" font-size="14" font-style="italic" fill="#6B7280">§ 8 ods. 6 • zákon 40/1993 Z. z.</text>
+  </g>
+
+  <!-- Kicker label top-right -->
+  <g transform="translate(1120, 95)">
+    <text x="0" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#0B4EA2">POHOVOR · SR</text>
+  </g>
+</svg>

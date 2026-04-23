@@ -1,0 +1,18 @@
+# robots.txt for pohovorobcianstvo.sk
+# Štátne občianstvo SR — člen siete CivicLearn
+
+User-agent: *
+Allow: /
+
+# Block admin/utility paths that shouldn't be indexed
+Disallow: /admin/
+Disallow: /api/
+Disallow: /assets/js/
+
+# Block duplicate/partial paths
+Disallow: /*?*utm_
+Disallow: /*?*fbclid
+Disallow: /*?*gclid
+
+# Sitemap
+Sitemap: https://pohovorobcianstvo.sk/sitemap.xml

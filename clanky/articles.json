@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Čo je pohovor zo štátneho občianstva SR?",
+    "desc": "Pohovor pred komisiou je povinnou súčasťou získania slovenského štátneho občianstva. Zistite, čo zahŕňa, kto ho hodnotí a ako prebieha.",
+    "url": "/co-je-pohovor-obcianstva/",
+    "image": "/assets/images/articles/co-je-pohovor-obcianstva.svg",
+    "lang": "sk"
+  },
+  {
+    "title": "Kto musí absolvovať pohovor a kto je oslobodený?",
+    "desc": "Komu ukladá zákon o štátnom občianstve povinnosť ísť na pohovor a kto je z tejto povinnosti oslobodený — prehľad kategórií žiadateľov.",
+    "url": "/kto-musi-absolvovat-pohovor/",
+    "image": "/assets/images/articles/kto-musi-absolvovat-pohovor.svg",
+    "lang": "sk"
+  },
+  {
+    "title": "Ako sa pripraviť — koľko času a akou metódou?",
+    "desc": "Realistický plán prípravy podľa vašej úrovne slovenčiny. Rozdelenie času medzi znalosti a jazyk, týždenný plán a najčastejšie chyby v plánovaní.",
+    "url": "/ako-sa-pripravit/",
+    "image": "/assets/images/articles/ako-sa-pripravit.svg",
+    "lang": "sk"
+  },
+  {
+    "title": "Ako prebieha deň pohovoru — čo čakať na okresnom úrade?",
+    "desc": "Praktický sprievodca dňom pohovoru: čo si priniesť, priebeh, poradie zložiek a ako zvládnuť stres.",
+    "url": "/ako-prebieha-den-pohovoru/",
+    "image": "/assets/images/articles/ako-prebieha-den-pohovoru.svg",
+    "lang": "sk"
+  },
+  {
+    "title": "What is the Slovak Citizenship Interview?",
+    "desc": "The interview before a commission is a mandatory part of acquiring Slovak citizenship. What it involves, who assesses it, and how it is conducted.",
+    "url": "/en/what-is-slovak-citizenship-interview/",
+    "image": "/assets/images/articles/co-je-pohovor-obcianstva.svg",
+    "lang": "en"
+  },
+  {
+    "title": "Who Must Take the Interview, and Who Is Exempt?",
+    "desc": "Who the Slovak citizenship law requires to sit the interview, and who is exempt from this requirement. An overview of applicant categories.",
+    "url": "/en/who-must-take-interview/",
+    "image": "/assets/images/articles/kto-musi-absolvovat-pohovor.svg",
+    "lang": "en"
+  },
+  {
+    "title": "Что такое собеседование для получения гражданства Словакии?",
+    "desc": "Собеседование перед комиссией — обязательная часть процедуры получения словацкого гражданства. Что оно включает, кто оценивает и как проходит.",
+    "url": "/ru/chto-takoe-sobesedovanie-po-grazhdanstvu/",
+    "image": "/assets/images/articles/co-je-pohovor-obcianstva.svg",
+    "lang": "ru"
+  },
+  {
+    "title": "Кто должен сдавать собеседование, а кто освобождён?",
+    "desc": "Кому закон о гражданстве Словакии предписывает пройти собеседование, а кто от него освобождён. Обзор категорий заявителей.",
+    "url": "/ru/kto-dolzhen-sdavat-sobesedovanie/",
+    "image": "/assets/images/articles/kto-musi-absolvovat-pohovor.svg",
+    "lang": "ru"
+  },
+  {
+    "title": "Що таке співбесіда для отримання громадянства Словаччини?",
+    "desc": "Співбесіда перед комісією — обов'язкова частина процедури отримання словацького громадянства. Що вона включає, хто оцінює та як проходить.",
+    "url": "/uk/shcho-take-spivbesida-na-gromadyanstvo/",
+    "image": "/assets/images/articles/co-je-pohovor-obcianstva.svg",
+    "lang": "uk"
+  },
+  {
+    "title": "Хто має проходити співбесіду, а хто звільнений?",
+    "desc": "Кому закон про громадянство Словаччини приписує пройти співбесіду, а хто від неї звільнений. Огляд категорій заявників.",
+    "url": "/uk/khto-maye-prokhodyty-spivbesidu/",
+    "image": "/assets/images/articles/kto-musi-absolvovat-pohovor.svg",
+    "lang": "uk"
+  },
+  {
+    "title": "Mi a szlovák állampolgársági elbeszélgetés?",
+    "desc": "A bizottság előtti elbeszélgetés a szlovák állampolgárság megszerzésének kötelező része. Mit tartalmaz, ki értékeli és hogyan zajlik.",
+    "url": "/hu/mi-az-allampolgarsagi-elbeszelgetes/",
+    "image": "/assets/images/articles/co-je-pohovor-obcianstva.svg",
+    "lang": "hu"
+  },
+  {
+    "title": "Kinek kell elbeszélgetésre mennie és ki mentesül?",
+    "desc": "Kinek írja elő a szlovák állampolgársági törvény az elbeszélgetést, és ki mentesül alóla. Kérelmezői kategóriák áttekintése.",
+    "url": "/hu/kinek-kell-elbeszelgetesre-mennie/",
+    "image": "/assets/images/articles/kto-musi-absolvovat-pohovor.svg",
+    "lang": "hu"
+  }
+]
