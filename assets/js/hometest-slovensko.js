@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
       createDonutChart() +
       "<p>Práve ste vyskúšali len ukážku našich otázok. " +
       "Získajte prístup k <strong>800 otázkam, 300 článkom s AI hodnotením a simuláciám pohovoru</strong> a pripravte sa systematicky.</p>" +
-      '<a href="https://civiclearn.com/slovensko/checkout" class="hero-primary-btn">Získať plný prístup</a>';
+      '<a href="https://civiclearn.com/slovensko/checkout" class="hero-primary-btn">Získať plný prístup</a><p class="wc-curious" style="margin-top:0.9rem;font-size:0.85rem;line-height:1.45;text-align:center;"><a href="https://civiclearn.com/insights/hardest-citizenship-questions?utm_source=pohovorsk-home&amp;utm_medium=free-test&amp;utm_campaign=world-challenge" target="_blank" rel="noopener" style="color:inherit;opacity:0.75;text-decoration:underline;text-underline-offset:2px;">Len zo zvedavosti? Vyskúšajte najťažšie otázky o občianstve na svete (v angličtine) →</a></p>';
     return card;
   }
 
