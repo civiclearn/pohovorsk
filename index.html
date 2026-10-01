@@ -38,6 +38,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/newhome.css">
+  <link rel="stylesheet" href="/assets/css/home-v2.css">
   <style>
     .premium-pricing { margin-top: 3rem; text-align: center; }
     .pricing-card { background: #fff; border-radius: 1.6rem; max-width: 540px; margin: 0 auto; overflow: hidden; box-shadow: 0 16px 34px rgba(0,0,0,0.08); }
@@ -75,293 +76,243 @@
 </head>
 <body>
 
-<header class="cl-header">
-  <div class="cl-header-inner">
-    <a href="/" class="cl-logo">
-      <img src="/assets/images/sk.svg" alt="SK" />
-      <span>PohovorObčianstvo.sk</span>
-    </a>
-    <nav class="cl-nav">
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="/" class="logo logo-long"><img alt="SK" src="/assets/images/sk.svg"/><span>PohovorObčianstvo.sk</span></a>
+
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"
+      onclick="var o=document.getElementById('hdr').classList.toggle('menu-open');this.setAttribute('aria-expanded',o)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+
+    <nav class="nav" id="site-nav">
       <a href="/bezplatny-test/">Bezplatný test</a>
       <a href="/clanky/">Články</a>
       <a href="/kontakt/">Kontakt</a>
       <a href="https://civiclearn.com/slovensko/login">Prihlásiť sa</a>
     </nav>
-    <div class="cl-right">
-      <div class="cl-powered">powered by <span>CivicLearn</span></div>
-      <a href="https://civiclearn.com/slovensko/checkout" class="cl-btn">Plný prístup</a>
+
+    <div class="hdr-right">
+      <div class="powered">
+        <div>powered by <b>CivicLearn</b></div>
+        <a class="tp" href="https://www.trustpilot.com/review/civiclearn.com" target="_blank" rel="noopener" aria-label="CivicLearn na Trustpilot: 4,5 z 5">
+          <span class="tp-stars" aria-hidden="true">
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="25" height="25" fill="#00b67a"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+            <svg viewBox="0 0 25 25"><rect width="12.5" height="25" fill="#00b67a"/><rect x="12.5" width="12.5" height="25" fill="#dcdce6"/><path fill="#fff" d="M12.5 4.3l2.1 5.1 5.5.4-4.2 3.6 1.3 5.4-4.7-3-4.7 3 1.3-5.4-4.2-3.6 5.5-.4z"/></svg>
+          </span>
+          <span class="tp-word">Trustpilot</span>
+        </a>
+      </div>
+      <a href="https://civiclearn.com/slovensko/checkout" class="btn btn-primary">Plný prístup</a>
     </div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-center hero-center--spaced">
-
-    <h1 class="hero-title">
-      <span>Pripravte sa na pohovor<br></span>
-      a získajte slovenské občianstvo
-    </h1>
-
-    <p class="hero-subtitle">
-      800 otázok zo slovenských reálií, 300 článkov s AI hodnotením a realistické simulácie&nbsp;pohovoru.<br>
-      Systematická príprava na ústne otázky aj na písomný súhrn pred komisiou obvodného&nbsp;úradu.
-    </p>
-
-    <div class="hero-actions">
-      <a href="https://civiclearn.com/slovensko/checkout" class="hero-primary-btn">Začať prípravu</a>
-      <a href="/bezplatny-test/" class="hero-secondary-btn">Vyskúšať zadarmo</a>
-    </div>
-
-    <div class="hero-social">
-      <div class="hero-social-top">
-        <span class="rating-stars">★★★★★</span>
-        <span class="rating-word">Vynikajúce</span>
+  <div class="wrap hero-grid">
+    <div>
+      
+      
+      <h1><span>Pripravte sa na pohovor</span> a získajte slovenské občianstvo</h1>
+      <p class="hero-sub">800 otázok zo slovenských reálií, 300 článkov s AI hodnotením a realistické simulácie pohovoru. Systematická príprava na ústne otázky aj na písomný súhrn pred komisiou obvodného úradu.</p>
+      <div class="hero-ctas">
+        <a href="https://civiclearn.com/slovensko/checkout" class="btn btn-primary" id="hero-cta">Začať prípravu</a>
+        <a href="/bezplatny-test/" class="btn btn-ghost">Vyskúšať zadarmo</a>
       </div>
-      <div class="hero-social-sub">
-        Tisíce kandidátov sa pripravilo<br class="mobile-only">v sieti CivicLearn.
+      <p class="hero-meta" id="v2Meta"><strong>59 €, jednorazová platba</strong> · doživotný prístup · bez predplatného</p>
+      <div class="rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>Vynikajúce</strong>
+        <span>Tisíce kandidátov sa pripravilo v sieti CivicLearn.</span>
       </div>
     </div>
-
-    <div class="hero-image-wide">
-      <img src="/assets/images/devices-sk.webp" alt="Platforma PohovorObčianstvo na rôznych zariadeniach">
+    <div class="hero-img">
+      <img src="/assets/images/devices-sk.webp" alt="Platforma PohovorObčianstvo na rôznych zariadeniach" width="2955" height="1885" fetchpriority="high" decoding="async">
     </div>
-
   </div>
 </section>
 
-<div class="info-banner-wrap">
-  <div class="info-banner">
-    ℹ️ Pohovor pred komisiou obvodného úradu je záverečný krok k získaniu slovenského občianstva. Skladá sa z ústnych otázok a z písomného súhrnu článku. <a href="/o-pohovore/">O pohovore a ako prebieha →</a>
-  </div>
-</div>
+<section class="notice-wrap"><div class="wrap"><div class="notice notice-slim">Pohovor pred komisiou obvodného úradu je záverečný krok k získaniu slovenského občianstva. Skladá sa z ústnych otázok a z písomného súhrnu článku. <a href="/o-pohovore/">O pohovore a ako prebieha →</a></div></div></section>
 
-<section class="features-section">
-  <div class="section-heading">
-    <div class="section-kicker">Systematická príprava</div>
-    <h2 class="section-title">Všetko, čo potrebujete na zvládnutie pohovoru</h2>
-    <p class="section-lead">
-      Trénujte obe zložky pohovoru — znalosti o Slovensku aj písomný súhrn — s AI hodnotením a v dostatočnom predstihu.
-    </p>
-  </div>
-
-  <div class="features-grid">
-
-    <div class="feature-card" onclick="location.href='/o-pohovore/'">
-      <a href="/o-pohovore/" class="feature-card-link">
-        <div class="feature-icon"><img src="/assets/images/5.svg" alt="O pohovore"></div>
-        <h3 class="feature-title">O pohovore</h3>
-        <p class="feature-text">Pohovor pred komisiou sa riadi § 8 zákona č. 40/1993 Z. z. Prečítajte si, ako prebieha a na čo vás komisia môže spýtať.</p>
-        <div class="feature-cta">Viac o pohovore <span class="arrow">›</span></div>
-      </a>
+<section class="section feat-v2">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Systematická príprava</span><h2>Všetko, čo potrebujete na zvládnutie pohovoru</h2><p>Trénujte obe zložky pohovoru — znalosti o Slovensku aj písomný súhrn — s AI hodnotením a v dostatočnom predstihu.</p></div>
+    <div class="features">
+      <div class="feature">
+        <img src="/assets/images/5.svg" alt="">
+        <h3>O pohovore</h3>
+        <p>Pohovor pred komisiou sa riadi § 8 zákona č. 40/1993 Z. z. Prečítajte si, ako prebieha a na čo vás komisia môže spýtať.</p>
+        <a class="feat-link" href="/o-pohovore/">Viac o pohovore <span class="arrow">›</span></a>
+      </div>
+      <div class="feature">
+        <img src="/assets/images/6.svg" alt="">
+        <h3>Bezplatný test</h3>
+        <p>Vyskúšajte 25 otázok z reálií SR. Zistite, na akej úrovni ste — bez registrácie a bez platby.</p>
+        <a class="feat-link" href="/bezplatny-test/">Spustiť test <span class="arrow">›</span></a>
+      </div>
+      <div class="feature">
+        <img src="/assets/images/3.svg" alt="">
+        <h3>Plná príprava</h3>
+        <p>800 otázok, 300 článkov s AI hodnotením a simulácie pohovoru. Trénujte vlastným tempom a sledujte pokrok.</p>
+        <a class="feat-link" href="https://civiclearn.com/slovensko/checkout">Začať trénovať <span class="arrow">›</span></a>
+      </div>
     </div>
-
-    <div class="feature-card" onclick="location.href='/bezplatny-test/'">
-      <a href="/bezplatny-test/" class="feature-card-link">
-        <div class="feature-icon"><img src="/assets/images/6.svg" alt="Bezplatný test"></div>
-        <h3 class="feature-title">Bezplatný test</h3>
-        <p class="feature-text">Vyskúšajte 25 otázok z reálií SR. Zistite, na akej úrovni ste — bez registrácie a bez platby.</p>
-        <div class="feature-cta">Spustiť test <span class="arrow">›</span></div>
-      </a>
-    </div>
-
-    <div class="feature-card" onclick="location.href='https://civiclearn.com/slovensko/checkout'">
-      <a href="https://civiclearn.com/slovensko/checkout" class="feature-card-link">
-        <div class="feature-icon"><img src="/assets/images/3.svg" alt="Plná príprava"></div>
-        <h3 class="feature-title">Plná príprava</h3>
-        <p class="feature-text">800 otázok, 300 článkov s AI hodnotením a simulácie pohovoru. Trénujte vlastným tempom a sledujte pokrok.</p>
-        <div class="feature-cta">Začať trénovať <span class="arrow">›</span></div>
-      </a>
-    </div>
-
   </div>
 </section>
 
-<section class="features-section" style="padding-top: 0;">
-  <div class="section-heading">
-    <div class="section-kicker">Dve zložky pohovoru</div>
-    <h2 class="section-title">Trénujte všetko, čo komisia preverí</h2>
-    <p class="section-lead">
-      Každá plná príprava pokrýva obe zložky pohovoru — vaše znalosti o Slovensku aj vašu schopnosť zhrnúť slovenský text.
-    </p>
-  </div>
-
-  <div class="skills-grid">
-
-    <div class="feature-card">
-      <div class="feature-icon skill-level-badge">Z</div>
-      <h3 class="feature-title">Reálie a história</h3>
-      <p class="feature-text">Otázky zo slovenskej histórie, geografie, kultúry a tradícií. Rozdelené do tém a mikroťém pre systematické učenie.</p>
+<section class="section feat-v2">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Dve zložky pohovoru</span><h2>Trénujte všetko, čo komisia preverí</h2><p>Každá plná príprava pokrýva obe zložky pohovoru — vaše znalosti o Slovensku aj vašu schopnosť zhrnúť slovenský text.</p></div>
+    <div class="features features-4">
+      <div class="feature feature-top">
+        <span class="feat-badge">Z</span>
+        <h3>Reálie a história</h3>
+        <p>Otázky zo slovenskej histórie, geografie, kultúry a tradícií. Rozdelené do tém a mikroťém pre systematické učenie.</p>
+        
+      </div>
+      <div class="feature feature-top">
+        <span class="feat-badge">Z</span>
+        <h3>Štát a inštitúcie</h3>
+        <p>Ústavné zriadenie, štátne inštitúcie, práva a povinnosti občana, členstvo v EÚ a zahraničná politika SR.</p>
+        
+      </div>
+      <div class="feature feature-top">
+        <span class="feat-badge">J</span>
+        <h3>Písomný súhrn</h3>
+        <p>Napíšte zhrnutie slovenského článku a získajte AI hodnotenie v štyroch dimenziách — na slovenskej stupnici 1–5.</p>
+        
+      </div>
+      <div class="feature feature-top">
+        <span class="feat-badge">J</span>
+        <h3>Ústne čítanie</h3>
+        <p>Trénujte čítanie dlhších slovenských textov nahlas. Nahrajte svoj prednes a vypočujte si ho pre samokontrolu.</p>
+        
+      </div>
     </div>
-
-    <div class="feature-card">
-      <div class="feature-icon skill-level-badge">Z</div>
-      <h3 class="feature-title">Štát a inštitúcie</h3>
-      <p class="feature-text">Ústavné zriadenie, štátne inštitúcie, práva a povinnosti občana, členstvo v EÚ a zahraničná politika SR.</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-icon skill-level-badge skill-level-badge--jazyk">J</div>
-      <h3 class="feature-title">Písomný súhrn</h3>
-      <p class="feature-text">Napíšte zhrnutie slovenského článku a získajte AI hodnotenie v štyroch dimenziách — na slovenskej stupnici 1–5.</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="feature-icon skill-level-badge skill-level-badge--jazyk">J</div>
-      <h3 class="feature-title">Ústne čítanie</h3>
-      <p class="feature-text">Trénujte čítanie dlhších slovenských textov nahlas. Nahrajte svoj prednes a vypočujte si ho pre samokontrolu.</p>
-    </div>
-
   </div>
 </section>
 
-<section class="inline-test">
-  <div class="inline-test-inner">
-    <h2 class="inline-test-heading">Otestujte svoje znalosti</h2>
-    <p class="inline-test-lead">Tri rýchle otázky, aby ste zistili, ako ste na tom</p>
+<section class="section quiz" id="free-questions">
+  <div class="wrap">
+    <div class="quiz-top">
+      <div class="section-head"><span class="kicker" id="v2QuizKicker">Bezplatné precvičovanie</span><h2>Otestujte svoje znalosti</h2><p>Tri rýchle otázky, aby ste zistili, ako ste na tom</p></div>
+      <div class="quiz-actions"><a href="/bezplatny-test/" class="quiz-more">Viac otázok →</a><a href="https://civiclearn.com/slovensko/checkout" class="btn btn-ghost">Vytvoriť účet</a></div>
+    </div>
+    <div class="progress">
+      <div id="inline-progress-text"></div>
+      <div class="progress-track"><div id="inline-progressbar"></div></div>
+    </div>
     <div id="inline-test-questions"></div>
-    <div class="inline-progressbar-wrapper">
-      <div class="inline-progressbar" id="inline-progressbar"></div>
+  </div>
+</section>
+
+<section class="section pricing-v2" id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Jednoduchá cena</span>
+      <h2>Všetko v cene, natrvalo</h2>
+      
     </div>
-    <div class="inline-cta-row">
-      <div class="upper-cta-wrapper">
-        <a href="/bezplatny-test/" class="btn-secondary-cta">Viac otázok →</a>
+    
+    <div class="price-card">
+      <div class="price-left">
+        <span class="price-tag">Prémiový prístup</span>
+        <div class="price-amount">59 €<small>jednorazovo</small></div>
+        <p class="price-sub">Jednorazová platba — doživotný prístup</p>
+        
+        
+        <a class="btn btn-primary" href="https://civiclearn.com/slovensko/checkout">Začať teraz</a>
+        <p class="price-note">Jednorazová platba. Žiadne predplatné.</p>
       </div>
-      <a href="https://civiclearn.com/slovensko/checkout" class="hero-primary-btn">Vytvoriť účet</a>
+      <div class="price-right">
+        <h3 id="v2Wyg">Čo získate</h3>
+        <ul class="checks feature-list">
+          <li>800 otázok zo slovenských reálií, histórie a inštitúcií</li>
+          <li>300 článkov s AI hodnotením (4 dimenzie, stupnica 1–5)</li>
+          <li>Realistická simulácia pohovoru (25 otázok, 17 na úspech)</li>
+          <li>Rýchle otázky, otázky podľa témy a denná výzva</li>
+          <li>Časté chyby — automaticky z vašich nesprávnych odpovedí</li>
+          <li>Kartičky a osobný zoznam označených otázok</li>
+          <li>Nahrávanie ústneho čítania pre samokontrolu</li>
+          <li>Plná štatistika pokroku a história všetkých pokusov</li>
+          <li>Prístup z počítača, tabletu a mobilu</li>
+          <li>Okamžitá aktivácia po platbe</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="premium-pricing">
-  <div class="pricing-card">
-    <div class="pricing-top"><span class="pricing-tag">Prémiový prístup</span></div>
-    <div class="pricing-price">
-      <div class="amount">59 €</div>
-      <div class="subtitle">Jednorazová platba — doživotný prístup</div>
-    </div>
-    <div class="pricing-divider"></div>
-    <ul class="feature-list">
-      <li>800 otázok zo slovenských reálií, histórie a inštitúcií</li>
-      <li>300 článkov s AI hodnotením (4 dimenzie, stupnica 1–5)</li>
-      <li>Realistická simulácia pohovoru (25 otázok, 17 na úspech)</li>
-      <li>Rýchle otázky, otázky podľa témy a denná výzva</li>
-      <li>Časté chyby — automaticky z vašich nesprávnych odpovedí</li>
-      <li>Kartičky a osobný zoznam označených otázok</li>
-      <li>Nahrávanie ústneho čítania pre samokontrolu</li>
-      <li>Plná štatistika pokroku a história všetkých pokusov</li>
-      <li>Prístup z počítača, tabletu a mobilu</li>
-      <li>Okamžitá aktivácia po platbe</li>
-    </ul>
-    <a class="pricing-cta" href="https://civiclearn.com/slovensko/checkout">Začať teraz</a>
-  </div>
-  <div class="pricing-guarantee">Jednorazová platba. Žiadne predplatné.</div>
-</section>
-
-<section class="cl-faq">
-  <div class="section-heading">
-    <div class="section-kicker">Časté otázky</div>
-    <h2 class="section-title">FAQ — PohovorObčianstvo</h2>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Je to predplatné?</span></div>
-    <div class="faq-answer"><p>Nie. Jednorazová platba 59 € vám dáva neobmedzený prístup ku všetkému obsahu, bez predplatného a bez skrytých poplatkov.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Čo je pohovor pred komisiou?</span></div>
-    <div class="faq-answer">
-      <p>Pohovor je záverečný krok v procese získavania slovenského občianstva podľa <strong>§ 8 zákona č. 40/1993 Z. z.</strong> o štátnom občianstve. Koná sa pred komisiou na obvodnom úrade a skladá sa z ústnych otázok o Slovensku aj z písomného súhrnu článku.</p>
-      <p>Nejde o štandardizovaný test — komisia kladie otázky v rámci zákonom stanovených tematických oblastí a hodnotí vaše odpovede. <a href="/o-pohovore/" style="color:#0B4EA2;font-weight:600;">Viac o pohovore →</a></p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Čo komisia preveruje?</span></div>
-    <div class="faq-answer">
-      <p>Komisia overuje vaše znalosti o slovenských reáliách (história, geografia, kultúra, tradície), o štátnom zriadení a inštitúciách, a vašu schopnosť porozumieť slovenskému textu a zhrnúť ho vlastnými slovami.</p>
-      <p>Naša príprava pokrýva obe zložky — 800 otázok pre znalostnú časť a 300 článkov pre písomný súhrn.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Ako funguje AI hodnotenie písomného súhrnu?</span></div>
-    <div class="faq-answer">
-      <p>Každý váš súhrn hodnotí AI v štyroch dimenziách na slovenskej školskej stupnici <strong>1–5 (kde 1 je najlepšia)</strong>:</p>
-      <p><strong>Vernosť</strong> — obsahová presnosť voči článku. <strong>Úplnosť</strong> — pokrytie kľúčových bodov. <strong>Jazyk</strong> — gramatika, slovná zásoba a koncovky. <strong>Súdržnosť</strong> — logický tok a čitateľnosť textu.</p>
-      <p>Celkové hodnotenie je <em>najhoršie zo štyroch</em> — tak ako v skutočnom pohovore, kde jedna vážna chyba v ktorejkoľvek oblasti môže sťažiť dojem.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Práve som zaplatil. Čo ďalej?</span></div>
-    <div class="faq-answer"><p>Po platbe budete presmerovaný priamo na prihlásenie. Zadajte e-mail a heslo, ktoré ste si zvolili pri nákupe, a získate okamžitý prístup k svojej príprave.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Ako dlho trvá príprava?</span></div>
-    <div class="faq-answer"><p>Záleží to od vašej úrovne slovenčiny a znalosti reálií. Väčšina používateľov dokončí celú prípravu za dva až štyri týždne pri 30 minútach denne. Odporúčame začať v dostatočnom predstihu pred termínom pohovoru.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Získam po príprave certifikát?</span></div>
-    <div class="faq-answer"><p>Nie — oficiálny výsledok získate len od komisie po pohovore. Naša platforma je prípravný nástroj: simulácie a AI hodnotenie vám ukážu, či ste pripravený, ale nenahrádzajú oficiálny pohovor.</p></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question"><span>Funguje to na mobile a tablete?</span></div>
-    <div class="faq-answer"><p>Áno. Platforma funguje na akomkoľvek zariadení s pripojením na internet — počítač, tablet alebo mobil.</p></div>
-  </div>
-
-</section>
-
-<section class="home-articles">
-  <div class="section-heading">
-    <div class="section-kicker">Viac čítania</div>
-    <h2 class="section-title">Články o príprave</h2>
-    <p class="section-lead">Tipy, stratégie a pozadie pre úspešné zvládnutie pohovoru pred komisiou.</p>
-  </div>
-
-  <!-- PASSPORT RANKING STRIP — Viac čítania (further-reading pointer → ranking page). Slovak copy: native review recommended. -->
-  <a href="https://civiclearn.com/passport-ranking"
-     style="display:flex;align-items:center;gap:14px;max-width:820px;margin:0 auto 24px;padding:13px 22px;background:#fff;border:1px solid #e5e1da;border-left:3px solid #7c3aed;border-radius:12px;text-decoration:none;color:#1d2230;text-align:left;transition:border-color .15s,box-shadow .15s;"
-     onmouseover="this.style.borderColor='#7c3aed';this.style.boxShadow='0 4px 16px rgba(124,58,237,.12)'"
-     onmouseout="this.style.borderColor='#e5e1da';this.style.borderLeftColor='#7c3aed';this.style.boxShadow='none'">
-    <span style="flex:0 0 auto;background:#f5f0ff;color:#7c3aed;font-weight:700;font-size:.7rem;letter-spacing:.02em;padding:5px 10px;border-radius:6px;white-space:nowrap;">REBRÍČEK PASOV</span>
-    <span style="flex:1 1 auto;min-width:0;font-size:.86rem;line-height:1.45;color:#555;text-align:left;">
-      <strong style="color:#1a1a2e;">Slovenský pas vám otvára celú Európu</strong> — právo žiť a pracovať v ktorejkoľvek krajine EÚ.
-    </span>
-    <span style="flex:0 0 auto;color:#7c3aed;font-weight:600;font-size:.84rem;white-space:nowrap;">Pozrieť rebríček &rarr;</span>
-  </a>
-
-  <div class="home-articles-grid" id="homeArticlesGrid"></div>
-  <p class="home-articles-more"><a href="/clanky/">Pozrieť všetky články →</a></p>
-</section>
-
-<section class="compat-section">
-  <div class="compat-inner">
-    <h2 class="compat-title">Kompatibilné so všetkými zariadeniami a modernými prehliadačmi</h2>
-    <div class="compat-grid">
-      <div class="compat-item"><img src="/assets/images/logos/windows.svg"><p>Windows</p></div>
-      <div class="compat-item"><img src="/assets/images/logos/macos.svg"><p>macOS</p></div>
-      <div class="compat-item"><img src="/assets/images/logos/android.svg"><p>Android</p></div>
-      <div class="compat-item"><img src="/assets/images/logos/ios.svg"><p>iPhone / iPad</p></div>
-      <div class="compat-item"><img src="/assets/images/logos/chrome.svg"><p>Chrome</p></div>
-      <div class="compat-item"><img src="/assets/images/logos/safari.svg"><p>Safari</p></div>
-      <div class="compat-item"><img src="/assets/images/logos/firefox.svg"><p>Firefox</p></div>
+<section class="section" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="section-head"><span class="kicker">Časté otázky</span><h2>FAQ — PohovorObčianstvo</h2><p id="v2FaqMore">Ďalšia otázka? <a href="/kontakt/">Napíšte nám</a>.</p></div>
+    <div class="faq-list">
+      <details><summary>Je to predplatné?</summary><p>Nie. Jednorazová platba 59 € vám dáva neobmedzený prístup ku všetkému obsahu, bez predplatného a bez skrytých poplatkov.</p></details>
+      <details><summary>Čo je pohovor pred komisiou?</summary><p>Pohovor je záverečný krok v procese získavania slovenského občianstva podľa <strong>§ 8 zákona č. 40/1993 Z. z.</strong> o štátnom občianstve. Koná sa pred komisiou na obvodnom úrade a skladá sa z ústnych otázok o Slovensku aj z písomného súhrnu článku.</p> <p>Nejde o štandardizovaný test — komisia kladie otázky v rámci zákonom stanovených tematických oblastí a hodnotí vaše odpovede. <a href="/o-pohovore/" style="color:#0B4EA2;font-weight:600;">Viac o pohovore →</a></p></details>
+      <details><summary>Čo komisia preveruje?</summary><p>Komisia overuje vaše znalosti o slovenských reáliách (história, geografia, kultúra, tradície), o štátnom zriadení a inštitúciách, a vašu schopnosť porozumieť slovenskému textu a zhrnúť ho vlastnými slovami.</p> <p>Naša príprava pokrýva obe zložky — 800 otázok pre znalostnú časť a 300 článkov pre písomný súhrn.</p></details>
+      <details><summary>Ako funguje AI hodnotenie písomného súhrnu?</summary><p>Každý váš súhrn hodnotí AI v štyroch dimenziách na slovenskej školskej stupnici <strong>1–5 (kde 1 je najlepšia)</strong>:</p> <p><strong>Vernosť</strong> — obsahová presnosť voči článku. <strong>Úplnosť</strong> — pokrytie kľúčových bodov. <strong>Jazyk</strong> — gramatika, slovná zásoba a koncovky. <strong>Súdržnosť</strong> — logický tok a čitateľnosť textu.</p> <p>Celkové hodnotenie je <em>najhoršie zo štyroch</em> — tak ako v skutočnom pohovore, kde jedna vážna chyba v ktorejkoľvek oblasti môže sťažiť dojem.</p></details>
+      <details><summary>Práve som zaplatil. Čo ďalej?</summary><p>Po platbe budete presmerovaný priamo na prihlásenie. Zadajte e-mail a heslo, ktoré ste si zvolili pri nákupe, a získate okamžitý prístup k svojej príprave.</p></details>
+      <details><summary>Ako dlho trvá príprava?</summary><p>Záleží to od vašej úrovne slovenčiny a znalosti reálií. Väčšina používateľov dokončí celú prípravu za dva až štyri týždne pri 30 minútach denne. Odporúčame začať v dostatočnom predstihu pred termínom pohovoru.</p></details>
+      <details><summary>Získam po príprave certifikát?</summary><p>Nie — oficiálny výsledok získate len od komisie po pohovore. Naša platforma je prípravný nástroj: simulácie a AI hodnotenie vám ukážu, či ste pripravený, ale nenahrádzajú oficiálny pohovor.</p></details>
+      <details><summary>Funguje to na mobile a tablete?</summary><p>Áno. Platforma funguje na akomkoľvek zariadení s pripojením na internet — počítač, tablet alebo mobil.</p></details>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="footer-inner">
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><span class="kicker">Viac čítania</span><h2>Články o príprave</h2><p>Tipy, stratégie a pozadie pre úspešné zvládnutie pohovoru pred komisiou.</p></div>
+    <div class="home-articles-grid" id="homeArticlesGrid"></div>
+    <p class="articles-more"><a href="/clanky/">Pozrieť všetky články →</a></p>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="closing-wrap" style="padding:24px 0 40px">
+  <div class="wrap">
+    <div class="closing">
+      <div>
+        <h2 id="v2ClosingH">Pripravení na pohovor?</h2>
+        <p id="v2ClosingP">800 otázok zo slovenských reálií a príprava na obe zložky pohovoru na jednom mieste. 59 €, jednorazovo.</p>
+      </div>
+      <a href="https://civiclearn.com/slovensko/checkout" class="btn btn-primary" id="v2ClosingBtn">Začať prípravu</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:24px 0 0">
+  <div class="wrap">
+    <a class="rank" href="https://civiclearn.com/passport-ranking">
+      <span class="rank-tag">REBRÍČEK PASOV</span>
+      <span><strong>Slovenský pas vám otvára celú Európu</strong> — právo žiť a pracovať v ktorejkoľvek krajine EÚ.</span>
+      <span class="rank-go">Pozrieť rebríček →</span>
+    </a>
+    <div class="devices" aria-label="Kompatibilné so všetkými zariadeniami a modernými prehliadačmi">
+      <span class="sr-only">Kompatibilné so všetkými zariadeniami a modernými prehliadačmi</span>
+      <span><img src="/assets/images/logos/windows.svg" alt="">Windows</span>
+      <span><img src="/assets/images/logos/macos.svg" alt="">macOS</span>
+      <span><img src="/assets/images/logos/android.svg" alt="">Android</span>
+      <span><img src="/assets/images/logos/ios.svg" alt="">iPhone / iPad</span>
+      <span><img src="/assets/images/logos/chrome.svg" alt="">Chrome</span>
+      <span><img src="/assets/images/logos/safari.svg" alt="">Safari</span>
+      <span><img src="/assets/images/logos/firefox.svg" alt="">Firefox</span>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
     <div>© <span id="footer-year"></span> PohovorObčianstvo.sk — člen siete CivicLearn.</div>
-    <div class="footer-links">
+    <nav>
       <a href="https://civiclearn.com/insights">Insights</a>
       <a href="/bezplatny-test/">Bezplatný test</a>
       <a href="/clanky/">Články</a>
       <a href="/kontakt/">Kontakt</a>
       <a href="/zasady/">Zásady</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
@@ -384,6 +335,40 @@ document.querySelectorAll(".faq-item").forEach(item => {
   try { const res = await fetch('/clanky/articles.json'); all = await res.json(); } catch(e) { return; }
   const selected = all.sort(() => Math.random() - 0.5).slice(0, 6);
   grid.innerHTML = selected.map(a => `<a href="${a.url}" class="home-article-card"><img src="${a.image}" alt="${a.title}" onerror="this.style.display='none'"><div class="home-article-body"><h3>${a.title}</h3><p>${a.desc}</p></div></a>`).join('');
+})();
+</script>
+<!-- Mobile sticky CTA (appears once the hero button scrolls away, hides over the quiz and pricing) -->
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <span id="v2Sticky"><b>59 €, jednorazovo</b>Doživotný prístup</span>
+  <a href="https://civiclearn.com/slovensko/checkout" class="btn btn-primary" tabindex="-1" id="v2StickyBtn">Začať</a>
+</div>
+
+<script>
+(function(){
+  var s=document.getElementById('sticky-cta'), h=document.querySelector('.hero-ctas .btn-primary'), p=document.getElementById('pricing'), q=document.getElementById('free-questions');
+  if(!('IntersectionObserver' in window)||!s||!h) return;
+  var heroGone=false, priceVisible=false, quizVisible=false;
+  function upd(){var on=heroGone&&!priceVisible&&!quizVisible;s.classList.toggle('show',on);s.setAttribute('aria-hidden',on?'false':'true');}
+  new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;upd();}).observe(h);
+  if(p) new IntersectionObserver(function(e){priceVisible=e[0].isIntersecting;upd();},{threshold:.15}).observe(p);
+  if(q) new IntersectionObserver(function(e){quizVisible=e[0].isIntersecting;upd();},{threshold:.05}).observe(q);
+})();
+</script>
+<script>
+/* Phones: free questions become a swipeable row and auto-advance after each answer */
+(function(){
+  var c=document.getElementById('inline-test-questions'); if(!c||!window.matchMedia) return;
+  var mq=window.matchMedia('(max-width:860px)');
+  c.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('.inline-option-btn'); if(!b||!mq.matches) return;
+    var card=b.closest('.inline-question-card'); if(!card) return;
+    var wrong=!!card.querySelector('.inline-wrong');
+    setTimeout(function(){
+      var n=card.nextElementSibling; if(!n) return;
+      var pad=parseInt(getComputedStyle(c).paddingLeft,10)||0;
+      c.scrollTo({left:n.offsetLeft-pad,behavior:'smooth'});
+    }, wrong?2000:1000);
+  });
 })();
 </script>
 </body>
